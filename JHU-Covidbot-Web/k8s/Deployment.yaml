@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jhu-covid19bot-web
+spec:
+  selector:
+    matchLabels:
+      app: jhu-covid19bot-web
+  template:
+    metadata:
+      labels:
+        app: jhu-covid19bot-web
+    spec:
+      containers:
+      - name: jhu-covid19bot-web
+        image: docker.pkg.github.com/arpansahoo/jhu-covid19bot-web
